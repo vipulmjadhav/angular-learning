@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-app';
+  
+  todoArr = []
+
+  addTodo(value){
+
+    this.todoArr.push(value);
+  }
+
+  deleteTodo(value){
+
+    for(let i=0;i<=this.todoArr.length;i++){
+      if(value == this.todoArr[i]){
+        this.todoArr.splice(i,1);
+      }
+    }
+    
+  }
 }

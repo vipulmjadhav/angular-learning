@@ -1,0 +1,49 @@
+install node js from their official documentation
+
+npm comes with node installation (node package manager)
+
+install angular
+>>npm install -g @angular/cli
+
+list out all the versions
+>>ng --version
+
+creates a new project with default routing set to true and stylesheets are css files.
+>>ng new project-name --routing --style=css
+
+To run the development server
+>>ng serve
+>>ng serve --open (opens the browser with the server link)
+
+@Component is a decorator function that specifies the Angular metadata for the component.
+
+To generate the new component names demo
+>>ng generate component demo
+
+
+
+Selector :
+matches the name of the HTML element that identifies this component within a parent component's template.
+
+Router : for using router in angular application as router is not a part of core angular application.
+import { RouterModule, Routes } from '@angular/router';
+
+Constructors:
+
+Constructors should not do complex tasks as this will affect on the performane of the system
+Constructors should do no more than set the initial local variables to simple values.
+
+ngOnInit():The ngOnInit() is a lifecycle hook. Angular calls ngOnInit() shortly after creating a component. 
+It's a good place to put initialization logic.
+Use ngOnInit() for two main reasons:
+
+To perform complex initializations shortly after construction.
+To set up the component after Angular sets the input properties.
+
+An ngOnInit() is a good place for a component to fetch its initial data.
+
+call ngOnInit() as soon as component is created as it does initialization.
+ngOnInit() runs only once.
+
+Pipes are a good way to format strings, currency amounts, dates and other display data. 
+Angular ships with several built-in pipes and you can create your own.

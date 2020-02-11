@@ -15,8 +15,16 @@
 
 <h2>
     <ul>
-        <li *ngFor = "let hero of hero">
+        <li *ngFor="let hero of hero" (click)="onSelect(hero)">
            <span>{{hero.id}}</span> {{hero.name}}
         </li>
     </ul>
 </h2>
+
+<div *ngIf = "selectedHero">
+<h2>{{selectedHero.name | uppercase}} Details</h2>
+<div>
+    <span> id : {{selectedHero.id}}</span>
+    <span> name : {{selectedHero.name}}</span>    
+</div>
+</div>

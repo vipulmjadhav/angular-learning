@@ -1,0 +1,2 @@
+>>tsc hello.ts && node hello.js
+>>tsc hello.ts --target ES5 && node hello.js

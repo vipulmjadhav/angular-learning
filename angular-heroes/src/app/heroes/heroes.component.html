@@ -8,23 +8,24 @@
 <br>
 <input type="number" name="heroes-id" [value] = "hero.id"> -->
 
-<input  placeholder = "name" type="text" name="heroes-name" [(ngModel)] = "hero.name">
+<!-- <input  placeholder = "name" type="text" name="heroes-name" [(ngModel)] = "hero.name">
 <br>
-<input type="number" name="heroes-id" [value] = "hero.id">
+<input type="number" name="heroes-id" [value] = "hero.id"> -->
 
 
-<h2>
-    <ul>
-        <li *ngFor="let hero of hero" (click)="onSelect(hero)">
-           <span>{{hero.id}}</span> {{hero.name}}
+    <ul class = "hero" >
+        <li *ngFor="let hero of hero" [class.selected] = "hero===selectedHero" (click)="onSelect(hero)">
+           <span class = "badge" >{{hero.id}}</span> {{hero.name}}
         </li>
     </ul>
-</h2>
 
-<div *ngIf = "selectedHero">
-<h2>{{selectedHero.name | uppercase}} Details</h2>
-<div>
-    <span> id : {{selectedHero.id}}</span>
-    <span> name : {{selectedHero.name}}</span>    
-</div>
-</div>
+
+<!-- <div *ngIf = "selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div> <span> id : {{selectedHero.id}}</span></div>
+    <div> <label> name : 
+        <input type="text" name="name" [(ngModel)] = "selectedHero.name"></label>        
+    </div>
+</div> -->
+
+<app-hero-detail [heroic] = "selectedHero"></app-hero-detail>

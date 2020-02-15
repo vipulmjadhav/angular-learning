@@ -1,0 +1,9 @@
+
+<input type="text" placeholder="enter name here" [(ngModel)] = "name">
+<button (click) = "add(name)">add</button>
+<ul>
+  <li *ngFor = "let name of names">
+      {{name}}
+      <button (click) = "remove(name)">Remove</button>
+  </li>
+</ul>

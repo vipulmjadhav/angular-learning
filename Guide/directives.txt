@@ -1,0 +1,9 @@
+Def : directives modifies the structure of DOM.
+types
+1.Attribute Directives - It only affects in the appearence of the DOM elements.
+2.Structural Directives - add/remove elements from DOM.
+
+1. [ngClass] and [ngStyle]
+
+2. *ngIf *ngFor *ngSwitch
+

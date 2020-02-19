@@ -1,0 +1,12 @@
+<div class="container">
+
+    <ul>
+        <li *ngFor = "let number of numbers,let i = index">
+    
+            {{number}}
+    
+    </li>
+    </ul>
+</div>
+
+<app-dirchild [num] = "numbers"></app-dirchild>

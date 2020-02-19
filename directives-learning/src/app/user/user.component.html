@@ -1,0 +1,14 @@
+<div class="container">
+
+<input type="text" [(ngModel)] = "username">
+
+<p>
+    {{username}}
+</p>
+
+<!-- button is enable or disable is decided by value of username. -->
+
+<button [disabled] = "!username">username</button>
+
+</div>
+
